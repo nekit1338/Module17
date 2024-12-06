@@ -20,11 +20,11 @@ async def create_user(user: CreateUser):
     pass
 
 
-@user_router.put("/update")
+@user_router.put("/update/{user_id}")
 async def update_user(user_id: int, user: UpdateUser):
     pass
 
 
-@user_router.delete("/delete")
+@user_router.delete("/delete/{user_id}")
 async def delete_user(user_id: int):
     pass
