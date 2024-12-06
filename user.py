@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 from app.schemas import CreateUser
+from app.schemas import UpdateUser
 
 user_router = APIRouter(prefix="/user", tags=["user"])
 
@@ -20,7 +21,7 @@ async def create_user(user: CreateUser):
 
 
 @user_router.put("/update")
-async def update_user(user_id: int, user: CreateUser):
+async def update_user(user_id: int, user: UpdateUser):
     pass
 
 
