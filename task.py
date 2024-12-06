@@ -1,6 +1,5 @@
 from fastapi import APIRouter
 from app.schemas import CreateTask
-
 from app.schemas import UpdateTask
 
 task_router = APIRouter(prefix="/task", tags=["task"])
@@ -21,11 +20,11 @@ async def create_task(task: CreateTask):
     pass
 
 
-@task_router.put("/update")
+@task_router.put("/update/task_id")
 async def update_task(task_id: int, task: UpdateTask):
     pass
 
 
-@task_router.delete("/delete")
+@task_router.delete("/delete/task_id")
 async def delete_task(task_id: int):
     pass
